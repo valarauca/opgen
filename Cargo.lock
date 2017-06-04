@@ -1,0 +1,30 @@
+[root]
+name = "opcode_generator"
+version = "0.1.0"
+dependencies = [
+ "xmlgeneral 0.1.0",
+]
+
+[[package]]
+name = "bitflags"
+version = "0.9.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "xml-rs"
+version = "0.6.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "bitflags 0.9.1 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "xmlgeneral"
+version = "0.1.0"
+dependencies = [
+ "xml-rs 0.6.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[metadata]
+"checksum bitflags 0.9.1 (registry+https://github.com/rust-lang/crates.io-index)" = "4efd02e230a02e18f92fc2735f44597385ed02ad8f831e7c1c1156ee5e1ab3a5"
+"checksum xml-rs 0.6.0 (registry+https://github.com/rust-lang/crates.io-index)" = "768c90d35b804112a0a9eedb6033c4de2a23942c11e163bc7e63db88738e140e"
