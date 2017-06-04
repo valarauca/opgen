@@ -32,7 +32,6 @@ fn build_str(mnem: &str, args: &str, desc: &str) -> String {
 fn append_str(base: &mut String, mnem: &str, args: &str, desc: &str) {
   base.push_str(&build_str(mnem, args, desc));
 }
-
 fn collect_mnem64<'a>(x: &'a XmlItem) -> HashMap<&'a String, String> {
   let mut map = HashMap::new();
   for data in x.children
@@ -72,7 +71,6 @@ fn collect_mnem64<'a>(x: &'a XmlItem) -> HashMap<&'a String, String> {
   }
   map
 }
-
 fn collect_mnem32<'a>(x: &'a XmlItem) -> HashMap<&'a String, String> {
   let mut map = HashMap::new();
   for data in x.children
@@ -115,7 +113,7 @@ fn collect_mnem32<'a>(x: &'a XmlItem) -> HashMap<&'a String, String> {
 
 fn main() {
 
-  let mut file = match File::open("parseable_instructions.xml") {
+  let mut file = match File::open("AZ.xml") {
     Ok(x) => x,
     Err(e) => panic!("Could not open file {:?}",e)
   };
